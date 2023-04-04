@@ -8,12 +8,13 @@ use Tests\TestCase;
 
 class TodoListTest extends TestCase
 {
-    public function test_example()
+    public function test_store_todo_list()
     {
         //Preparation / prepare
-        $this->withoutExceptionHandling();
+
         // Action / perform
         $response = $this->getJson(route('todo-list.index'));
+        dd($response->json());
         // Assertion / predict
         $this->assertEquals(1, count($response->json()));
     }
