@@ -9,6 +9,10 @@ class TodoList extends Model
 {
     use HasFactory;
 
+    /**
+     * @var mixed
+     */
+    public $id;
     protected $fillable = ['name'];
     protected $guarded = array('id', 'password');
 }
